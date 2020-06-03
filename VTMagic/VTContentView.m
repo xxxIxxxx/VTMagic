@@ -210,4 +210,14 @@
     return [_visibleDict allValues];
 }
 
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer  shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+
+    if (self.contentOffset.x <= 0) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
